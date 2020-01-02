@@ -1,0 +1,14 @@
+type TodoItem {
+  id: ID!
+  name: String!
+  description: String
+}
+
+type Query {
+  totalTodoItems: Int!
+  allTodoItems: [TodoItem!]!
+}
+
+type Mutation {
+  postTodoItem(name: String!, description: String): TodoItem!
+}
